@@ -12,7 +12,7 @@ public class ExceptionHandlerController {
 
     @ExceptionHandler(InvalidRequestException.class)
     public ResponseEntity<ErrorRsDTO> handleInvalidRequest(final InvalidRequestException e) {
-        final ErrorRsDTO errorToReturn = new ErrorRsDTO(e.getCode().getErrorCode(), e.getDescription());
+        final ErrorRsDTO errorToReturn = new ErrorRsDTO(e.getDescription());
         return new ResponseEntity<>(errorToReturn, HttpStatus.BAD_REQUEST);
     }
 

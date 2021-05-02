@@ -1,20 +1,20 @@
-package com.ucalp.sempar.dto.rq;
+package com.ucalp.sempar.dto.rs;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
+
+import java.time.LocalDateTime;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserRqDTO {
+public class AdmissionLogRsDTO {
 
-    private String username;
-    @ToString.Exclude
-    private String password;
+    private Long userId;
     private String name;
     private String surname;
     private String email;
+    private LocalDateTime admissionDateTime;
 
 }

@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class ErrorRsDTO {
 
-    private String code;
     private String description;
 
 }
